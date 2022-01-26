@@ -1,18 +1,18 @@
 export interface Task{
-    id : number;
-    taskname : string;
-    taskdescription : string;
-    assignedto : string;
-    duedate: Date;    
-    iscompleted : boolean;
+    Id : number;
+    taskName : string;
+    taskDescription : string;
+    assignedTo : string;
+    dueDate: Date;    
+    isCompleted : boolean;
 }
 
 export class Convert {
-    public static toMovie(json: string): Task {
+    public static toTask(json: string): Task {
         return JSON.parse(json);
     }
 
-    public static MovieToJson(value: Task): string {
+    public static TaskToJson(value: Task): string {
         return JSON.stringify(value);
     }
 }
