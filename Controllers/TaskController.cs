@@ -23,5 +23,10 @@ namespace TaskListCapstone.Controllers
         {
             return db.GetTask(id);
         }
+        [HttpPost("makeNew")]
+        public void PostMovie(Task t)
+        {
+            db.InsertTask(t);
+        }
     }
 }

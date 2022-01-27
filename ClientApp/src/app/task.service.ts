@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Task } from './Task';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,8 @@ GetTaskList(){
 
 GetTask(id : number) : Observable<Object> {
   return this.http.get(this.url + "/get/" + id);
+}
+CreateTask(t : Task){
+  return this.http.post(this.url+"/makeNew/", t);
 }
 }

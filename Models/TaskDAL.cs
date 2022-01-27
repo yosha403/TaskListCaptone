@@ -37,5 +37,15 @@ namespace TaskListCapstone.Models
                 return match;
             }
         }
+        public void InsertTask(Task t)
+        {
+            string sql = $"insert into tasks values(0,'{t.TaskName}','{t.TaskDescription}','{t.AssignedTo}','{t.DueDate.ToString("yyyy-MM-dd")}',{t.IsCompleted})";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Task>(sql);
+                connect.Close();
+            }
+        }
     }
 }
