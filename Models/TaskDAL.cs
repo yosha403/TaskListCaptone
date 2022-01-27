@@ -47,5 +47,15 @@ namespace TaskListCapstone.Models
                 connect.Close();
             }
         }
+        public void DeleteTask(int id)
+        {
+            string sql = $"delete from tasks where id={id}";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Task>(sql);
+                connect.Close();
+            }
+        }
     }
 }

@@ -28,5 +28,11 @@ namespace TaskListCapstone.Controllers
         {
             db.InsertTask(t);
         }
+
+        [HttpDelete("delete/{id}")]
+        public void DeleteTask(int id)
+        {
+            db.DeleteTask(id);
+        }
     }
 }

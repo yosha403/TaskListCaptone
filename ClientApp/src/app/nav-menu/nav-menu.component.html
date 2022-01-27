@@ -21,31 +21,30 @@
       >
         <ul class="navbar-nav flex-grow">
           <!-- <li
-            class="nav-item"
-            [routerLinkActive]="['link-active']"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+    class="nav-item"
+    [routerLinkActive]="['link-active']"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+  </li>
+  <li class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-dark" [routerLink]="['/counter']"
+      >Counter</a
+    >
+  </li>
+  <li class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
+      >Fetch data</a
+    >
+  </li> -->
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/task-list']">List Tasks</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
+            <a class="nav-link text-dark" [routerLink]="['/create-task']">Add Task</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
-            >
-          </li> -->
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/task-list']"
-              >List Tasks</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/create-task']"
-              >Add Task</a
-            >
+            <a class="nav-link text-dark" [routerLink]="['/full-crud']">Delete Task</a>
           </li>
         </ul>
       </div>

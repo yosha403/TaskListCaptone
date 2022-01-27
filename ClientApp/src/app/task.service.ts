@@ -23,4 +23,7 @@ GetTask(id : number) : Observable<Object> {
 CreateTask(t : Task){
   return this.http.post(this.url+"/makeNew/", t);
 }
+DeleteTask(id: number){
+  return this.http.delete(this.url +"/delete/"+id);    
+}
 }
