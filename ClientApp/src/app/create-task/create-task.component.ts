@@ -27,7 +27,7 @@ export class CreateTaskComponent implements OnInit {
     let isCompleted: boolean = Boolean.call(<HTMLInputElement>document.getElementById("isCompleted")).value;
     console.log(isCompleted);
 
-    let newTask: Task = { Id: 0, taskName: taskName, taskDescription: taskDescription, assignedTo: assignedTo, dueDate: dueDate, isCompleted: isCompleted };    
+    let newTask: Task = { id: 0, taskName: taskName, taskDescription: taskDescription, assignedTo: assignedTo, dueDate: dueDate, isCompleted: isCompleted };    
     this.taskService.CreateTask(newTask).subscribe(
       (response: any) => { location.reload() }
     );

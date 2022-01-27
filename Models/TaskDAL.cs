@@ -57,5 +57,15 @@ namespace TaskListCapstone.Models
                 connect.Close();
             }
         }
+        public void UpdateTask(int id, Task newValues)
+        {
+            string sql = $"update tasks set taskname='{newValues.TaskName}', taskdescription='{newValues.TaskDescription}', assignedto='{newValues.AssignedTo}', duedate='{newValues.DueDate.ToString("yyyy-MM-dd")}', iscompleted={newValues.IsCompleted} where id={id}";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Task>(sql);
+                connect.Close();
+            }
+        }
     }
 }

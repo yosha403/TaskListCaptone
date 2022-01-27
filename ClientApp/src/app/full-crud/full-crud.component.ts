@@ -29,4 +29,17 @@ export class FullCrudComponent implements OnInit {
     );
   }
 
+  EditTask(id: number) {
+      let displayPanel = document.getElementById("display"+id);    
+      let editPanel = document.getElementById("edit"+id);
+    
+    if (displayPanel.style.display === "" || displayPanel.style.display === "inherit"){
+      displayPanel.style.display = "none";
+      editPanel.style.display = "inherit";
+    }
+    else if (displayPanel.style.display === "none") {
+      displayPanel.style.display = "inherit";
+      editPanel.style.display = "none";
+    }
+  }
 }

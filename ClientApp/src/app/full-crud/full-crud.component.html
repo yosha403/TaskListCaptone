@@ -8,6 +8,6 @@
         <p>IsCompleted: {{t.isCompleted}}</p>
      <button (click)="DeleteEntry(t.id, i)">Delete {{t.taskName}}</button>
      </div>
-     <!-- <app-update-movie id="edit{{m.id}}" style="display: none;" [Id]=m.id></app-update-movie>
-     <button (click)="EditMovie(m.id)">Edit {{m.title}}</button> -->
+      <app-edit-task id="edit{{t.id}}" style="display: none;" [Id]=t.id></app-edit-task>
+     <button (click)="EditTask(t.id)">Edit {{t.taskName}}</button> 
  </div>

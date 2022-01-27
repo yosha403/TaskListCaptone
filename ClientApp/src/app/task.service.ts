@@ -26,4 +26,7 @@ CreateTask(t : Task){
 DeleteTask(id: number){
   return this.http.delete(this.url +"/delete/"+id);    
 }
+  UpdateTask(newTask: Task, id: number) {
+    return this.http.put(this.url + "/update/" + id, newTask);
+  }
 }

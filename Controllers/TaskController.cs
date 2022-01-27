@@ -34,5 +34,31 @@ namespace TaskListCapstone.Controllers
         {
             db.DeleteTask(id);
         }
+        [HttpPut("update/{id}")]       
+        public void UpdateTask(int id, Task t)
+        {
+            Task original = db.GetTask(id);
+            if (t.TaskName== null || t.TaskName == "")
+            {
+                t.TaskName = original.TaskName;
+            }
+            if (t.TaskDescription == null || t.TaskDescription == "")
+            {
+                t.TaskDescription = original.TaskDescription;
+            }
+            if (t.AssignedTo == null || t.AssignedTo == "")
+            {
+                t.AssignedTo = original.AssignedTo;
+            }
+            if (t.DueDate == null)
+            {
+                t.DueDate = original.DueDate;
+            }
+            //if (t.IsCompleted == "")
+            //{
+            //    t.DueDate = original.DueDate;
+            //}
+            db.UpdateTask(id, t);
+        }
     }
 }

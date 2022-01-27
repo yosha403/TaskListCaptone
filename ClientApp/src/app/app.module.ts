@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { FullCrudComponent } from './full-crud/full-crud.component';
+import { EditTaskComponent } from './edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FullCrudComponent } from './full-crud/full-crud.component';
     FetchDataComponent,
     TaskListComponent,
     CreateTaskComponent,
-    FullCrudComponent
+    FullCrudComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -35,6 +37,7 @@ import { FullCrudComponent } from './full-crud/full-crud.component';
       { path: 'task-list', component: TaskListComponent },
       { path: 'create-task', component: CreateTaskComponent },
       { path: 'full-crud', component: FullCrudComponent },
+      { path: 'edit-task', component: EditTaskComponent },
     ])
   ],
   providers: [],

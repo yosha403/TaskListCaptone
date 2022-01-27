@@ -1,5 +1,5 @@
 export interface Task{
-    Id : number;
+    id : number;
     taskName : string;
     taskDescription : string;
     assignedTo : string;
